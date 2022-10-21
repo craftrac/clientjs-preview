@@ -1,0 +1,32 @@
+{
+  "name": "es-clientjs-tester",
+  "version": "1.0.0",
+  "description": "extremely minimal ES6+ tester for client Javascript modules",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftrac/es-clientjs-tester.git"
+  },
+  "keywords": [
+    "client",
+    "js",
+    "es6",
+    "node",
+    "tester",
+    "bulk",
+    "free"
+  ],
+  "author": "craftrac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craftrac/es-clientjs-tester/issues"
+  },
+  "homepage": "https://github.com/craftrac/es-clientjs-tester#readme",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  }
+}
