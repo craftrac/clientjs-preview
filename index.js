@@ -23,6 +23,5 @@ class ClientJsTest {
   }
 }
 
-ClientJsTest.serve();
 
 export default ClientJsTest;
