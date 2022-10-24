@@ -1,5 +1,6 @@
 // STANDALONE SERVER
-import ClientJsTester from './index.js';
+import ClientJsPreview from './index.js';
 
 
-ClientJsTester.serve();
+ClientJsPreview.serve();
+console.log('standalone server active...');

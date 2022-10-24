@@ -1,27 +1,39 @@
 import http from 'http';
-import nstatic from 'node-static';
+import fs from 'fs';
+
 
 const PORT = 3000;
 const STATIC_DIR = 'static';
 
-class ClientJsTest {
+class ClientJsPreview {
   static serve(staticPath) {
+    this.dirname = process.cwd() + '/' + STATIC_DIR;
+    const dirname = process.cwd() + '/' + STATIC_DIR;
     if (typeof staticPath != 'undefined') {
       // use tester as a module
       console.log('running as a module');
       this.dirname = process.cwd() + '/' + staticPath;
     }
-    else {
-      // use tester standalone
-      console.log('running standalone server');
-      this.dirname = process.cwd() + '/' + STATIC_DIR;
-    }
-    const file = new(nstatic.Server)(this.dirname);
     http.createServer(function (req, res) {
-      file.serve(req, res);
+      if(req.url === "/"){
+        fs.readFile("./static/index.html", "UTF-8", function(err, html){
+            res.writeHead(200, {"Content-Type": "text/html"});
+            res.end(html);
+        });
+      } else if(req.url.match("\.js$")){
+        //var jsPath = path.join(dirname, 'js/', req.url);
+        const jsPath = dirname + '/js' + req.url;
+        console.debug(jsPath);
+        const fileStream = fs.createReadStream(jsPath, "UTF-8");
+        res.writeHead(200, {"Content-Type": "application/javascript"});
+        fileStream.pipe(res);
+      } else {
+        res.writeHead(404, {"Content-Type": "text/html"});
+        res.end("No Page Found");
+    }
     }).listen(PORT);
   }
 }
 
 
-export default ClientJsTest;
+export default ClientJsPreview;

@@ -1,5 +1,5 @@
 {
-  "name": "es-clientjs-tester",
+  "name": "clientjs-preview",
   "version": "1.1.2",
   "description": "extremely minimal ES6+ tester for client Javascript modules",
   "type": "module",
@@ -23,10 +23,10 @@
   "author": "craftrac",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/craftrac/es-clientjs-tester/issues"
+    "url": "https://github.com/craftrac/clientjs-preview/issues"
   },
-  "homepage": "https://github.com/craftrac/es-clientjs-tester#readme",
+  "homepage": "https://github.com/craftrac/clientjs-preview#readme",
   "dependencies": {
-    "node-static": "^0.7.11"
+    "fs": "^0.0.1-security"
   }
 }
