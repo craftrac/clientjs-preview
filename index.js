@@ -22,8 +22,7 @@ class ClientJsPreview {
         });
       } else if(req.url.match("\.js$")){
         //var jsPath = path.join(dirname, 'js/', req.url);
-        const jsPath = dirname + '/js' + req.url;
-        console.debug(jsPath);
+        const jsPath = dirname + '/modules' + req.url;
         const fileStream = fs.createReadStream(jsPath, "UTF-8");
         res.writeHead(200, {"Content-Type": "application/javascript"});
         fileStream.pipe(res);

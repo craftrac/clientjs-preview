@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <title>Client ES Module Tester</title>
     <link type="image/png" sizes="32x32" rel="icon" href="favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script type="module">
-      import bar from './js/foo.js';
-      bar();
+      import {onload} from './main.js';
+      onload();
     </script>
-  </head>
+    </head>
   <body>
     <!-- page content -->
     CLIENT ES MODULE TEST ENVIRONMENT
+
   </body>
+
 </html>
