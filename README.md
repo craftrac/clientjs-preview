@@ -18,3 +18,5 @@ This module has been made because I wanted to keep everything simple, develop fr
 1. Install it in your frontend project using `npm install es-clientjs-tester`
 2. Import in your test/preview js file using `import ClientJsPreview from 'es-clientjs-tester`
 3. Call the server using `ClientJsPreview(<main js path>)`
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O5O8X9SD)
